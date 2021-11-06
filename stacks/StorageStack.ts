@@ -5,7 +5,7 @@ export default class StorageStack extends sst.Stack {
   bucket;
 
   // Public reference to the table
-  table;
+  table: sst.Table;
 
   constructor(scope: sst.App, id: string, props?: sst.StackProps) {
     super(scope, id, props);
