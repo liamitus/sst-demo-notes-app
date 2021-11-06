@@ -3,7 +3,7 @@ import handler from './util/handler';
 import dynamoDb from './util/dynamodb';
 
 export const main = handler(async (event) => {
-  const data = JSON.parse(event.body || '');
+  const data = JSON.parse(event.body || 'missing_event_body');
   if (!process.env.TABLE_NAME) {
     throw new Error('TABLE_NAME missing');
   }
