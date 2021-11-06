@@ -23,7 +23,7 @@
     "@aws-cdk/aws-iam": "1.126.0",
     "@aws-cdk/core": "1.126.0",
     "@serverless-stack/cli": "0.50.1",
-    "@serverless-stack/resources": "0.50.1",
+    "@serverless-stack/resources": "^0.50.2",
     "@types/uuid": "^8.3.1",
     "aws-sdk": "^2.1018.0",
     "stripe": "^8.186.1",

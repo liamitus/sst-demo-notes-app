@@ -1,4 +1,5 @@
 import * as sst from '@serverless-stack/resources';
+import { HttpMethods } from '@aws-cdk/aws-s3';
 
 export default class StorageStack extends sst.Stack {
   // Public reference to the bucket
@@ -19,7 +20,13 @@ export default class StorageStack extends sst.Stack {
             maxAge: 3000,
             allowedOrigins: ['*'],
             allowedHeaders: ['*'],
-            allowedMethods: ['GET', 'PUT', 'POST', 'DELETE', 'HEAD'],
+            allowedMethods: [
+              HttpMethods.GET,
+              HttpMethods.PUT,
+              HttpMethods.POST,
+              HttpMethods.DELETE,
+              HttpMethods.HEAD,
+            ],
           },
         ],
       },
